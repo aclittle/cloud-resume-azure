@@ -1,166 +1,30 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 body {
+    font-family: Arial, sans-serif;
     line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
     color: #333;
-    background-color: #f9f9f9;
-    max-width: 1100px;
-    margin: 2rem auto;
-    padding: 0 2rem;
-}
-
-.header {
+  }
+  
+  header {
     text-align: center;
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #ecf0f1;
-}
-
-.name {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-}
-
-.contact-info {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-    color: #7f8c8d;
-}
-
-section {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-h2 {
-    color: #2980b9;
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid #ecf0f1;
-    padding-bottom: 0.5rem;
-    font-size: 1.4rem;
-}
-
-.grid-2col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
-
-.job-title, .degree-title, .project-title, .role-title {
-    font-weight: 600;
-    color: #2c3e50;
-    font-size: 1.1rem;
-}
-
-.company, .school, .organization {
-    color: #7f8c8d;
-    margin-bottom: 0.5rem;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+  }
+  
+  h1 {
+    color: #0066cc;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 40px;
     font-style: italic;
-}
-
-.date {
-    float: right;
-    color: #95a5a6;
-    font-weight: 500;
-}
-
-ul {
-    padding-left: 1.5rem;
-    margin: 0.5rem 0 1rem;
-}
-
-li {
-    margin-bottom: 0.5rem;
-}
-
-.tech-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 0.5rem 0 1.5rem;
-}
-
-.tag {
-    background: #ecf0f1;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    color: #2c3e50;
-}
-
-.award {
-    color: #27ae60;
-    font-weight: 500;
-}
-
-.job, .degree, .project, .volunteer-role {
-    margin-bottom: 1.5rem;
-}
-
-.job:last-child, .degree:last-child, .project:last-child, .volunteer-role:last-child {
-    margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-    .grid-2col {
-        grid-template-columns: 1fr;
-    }
-    
-    body {
-        padding: 0 1rem;
-    }
-    
-    .contact-info {
-        gap: 0.8rem;
-    }
-    
-    .name {
-        font-size: 2rem;
-    }
-}
-
-@media print {
-    body {
-        max-width: none;
-        margin: 0;
-        padding: 0;
-        background: none;
-        font-size: 12pt;
-    }
-    
-    section {
-        box-shadow: none;
-        padding: 0.5rem 0;
-        margin-bottom: 1rem;
-        break-inside: avoid;
-    }
-    
-    .header {
-        margin-bottom: 1rem;
-    }
-    
-    h2 {
-        font-size: 1.2rem;
-    }
-    
-    .grid-2col {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    @page {
-        margin: 1cm;
-    }
-}
+    color: #666;
+  }
