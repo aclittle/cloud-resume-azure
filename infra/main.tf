@@ -7,18 +7,18 @@ locals {
 
 resource "azurerm_resource_group" "crc" {
   name     = "${var.project_name}-${var.environment}-rg"
-  location = "eastus"
+  location = "${var.location}"
   tags     = local.common_tags
 }
 
 resource "azurerm_storage_account" "frontend" {
-  name                     = "${lower(var.project_name)}${var.environment}${random_string.storage_suffix.result}"
-  resource_group_name      = azurerm_resource_group.crc.name
-  location                 = azurerm_resource_group.crc.location
-  account_tier             = "Standard"
-  account_replication_type = "LRS"
+  name                            = "${lower(var.project_name)}${var.environment}${random_string.storage_suffix.result}"
+  resource_group_name             = azurerm_resource_group.crc.name
+  location                        = azurerm_resource_group.crc.location
+  account_tier                    = "Standard"
+  account_replication_type        = "LRS"
   allow_nested_items_to_be_public = false
-  tags                     = local.common_tags
+  tags                            = local.common_tags
 }
 
 resource "random_string" "storage_suffix" {
@@ -46,26 +46,26 @@ resource "azurerm_cdn_endpoint" "frontend" {
   location            = azurerm_resource_group.crc.location
   resource_group_name = azurerm_resource_group.crc.name
   origin_host_header  = azurerm_storage_account.frontend.primary_web_host
-  
+
   origin {
     name      = "storagestaticwebsite"
     host_name = azurerm_storage_account.frontend.primary_web_host
   }
-  
+
   delivery_rule {
     name  = "EnforceHTTPS"
     order = 1
-    
+
     request_scheme_condition {
       operator     = "Equal"
       match_values = ["HTTP"]
     }
-    
+
     url_redirect_action {
       redirect_type = "Found"
       protocol      = "Https"
     }
   }
-  
+
   tags = local.common_tags
 }
