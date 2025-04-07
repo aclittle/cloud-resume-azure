@@ -7,7 +7,7 @@ locals {
 
 resource "azurerm_resource_group" "crc" {
   name     = "${var.project_name}-${var.environment}-rg"
-  location = "${var.location}"
+  location = var.location
   tags     = local.common_tags
 }
 
@@ -68,4 +68,13 @@ resource "azurerm_cdn_endpoint" "frontend" {
   }
 
   tags = local.common_tags
+}
+
+resource "cloudflare_dns_record" "cdn_name" {
+  zone_id = var.cloudflare_zone_id
+  name    = "@"
+  content = azurerm_cdn_endpoint.frontend.fqdn
+  type    = "CNAME"
+  proxied = true
+  ttl     = 1
 }
