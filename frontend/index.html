@@ -1,37 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Cloud Resume</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander Little - Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <p>Cloud Engineer | Azure Enthusiast</p>
-  </header>
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I'm a cloud professional passionate about infrastructure as code and DevOps.</p>
-    </section>
-    <section id="experience">
-      <h2>Experience</h2>
-      <ul>
-        <li><strong>Job Title</strong> at Company (Year–Present)</li>
-      </ul>
-    </section>
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>Azure, Terraform, GitHub Actions</li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    <p id="counter">Loading visitor count...</p>
-  </footer>
-  <script src="script.js"></script>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Alexander Little</h1>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> St. Andrews</p>
+                    <p><i class="fas fa-envelope"></i> alexander.little1@outlook.com</p>
+                    <p><i class="fas fa-phone"></i> (506) 467-5229</p>
+                    <p><i class="fab fa-linkedin"></i> linkedin.com/in/alexanderlittle-dev</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Cloud & Infrastructure</h3>
+                    <p>Azure, AWS, Kubernetes, Terraform, Docker, Linux/Windows Server</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Monitoring & Security</h3>
+                    <p>Prometheus, Grafana, Incident Response</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Scripting & Automation</h3>
+                    <p>Python, Bash, PowerShell</p>
+                </div>
+                <div class="skill-category">
+                    <h3>IT Support & Documentation</h3>
+                    <p>System deployment, troubleshooting, process improvement</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Professional Experience</h2>
+            <div class="experience">
+                <div class="experience-header">
+                    <div>
+                        <h3>Renewed Computer Technology</h3>
+                        <p class="job-title">Computer Assembly Technician</p>
+                    </div>
+                    <div>
+                        <p class="location">Mississauga, ON</p>
+                        <p class="date">May 2024 - Feb 2025</p>
+                    </div>
+                </div>
+                <ul>
+                    <li>Diagnosed hardware/software issues in 1,000+ systems, achieving 98% first-time success rate and reducing troubleshooting time by 15% through standardized protocols.</li>
+                    <li>Implemented quality checks for 50+ systems weekly, improving team efficiency by 20%.</li>
+                    <li>Created standardized workflows for OS deployments, ensuring consistency and scalability.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Education</h2>
+            <div class="education">
+                <div class="education-header">
+                    <div>
+                        <h3>George Brown College</h3>
+                        <p class="degree">Graduate Certificate in Cloud Computing Technologies</p>
+                    </div>
+                    <div>
+                        <p class="location">Toronto, ON</p>
+                        <p class="date">2024</p>
+                    </div>
+                </div>
+                <ul>
+                    <li><strong>GPA: 3.6/4.0</strong>, Honours Distinction</li>
+                    <li><strong>Relevant Coursework:</strong> Azure Security, AWS Cloud Practitioner, Advanced Linux</li>
+                </ul>
+            </div>
+
+            <div class="education">
+                <div class="education-header">
+                    <div>
+                        <h3>Mount Allison University</h3>
+                        <p class="degree">BSc in Computer Science</p>
+                    </div>
+                    <div>
+                        <p class="location">Sackville, NB</p>
+                        <p class="date">2017 - 2021</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Technical Projects</h2>
+            <div class="project">
+                <div class="project-header">
+                    <h3>KubePress</h3>
+                    <p class="project-subtitle">Cloud-Native WordPress Deployment</p>
+                    <p class="date">2024</p>
+                </div>
+                <ul>
+                    <li>Deployed scalable WordPress on Amazon EKS using Terraform and Docker, configuring auto-scaling for 99.9% uptime.</li>
+                    <li>Secured infrastructure with AWS IAM roles, VPC policies, and S3 encryption.</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <h3>Collectr</h3>
+                    <p class="project-subtitle">Library Management System</p>
+                    <p class="date">2021</p>
+                </div>
+                <ul>
+                    <li>Built a full-stack app with React/Node.js, reducing data retrieval time by 40%.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Volunteering & Leadership</h2>
+            <div class="volunteer">
+                <div class="volunteer-header">
+                    <div>
+                        <h3>Mount Allison University Hackathon</h3>
+                        <p class="role">Executive Member</p>
+                    </div>
+                    <div>
+                        <p class="location">Sackville, NB</p>
+                        <p class="date">2019 - 2020</p>
+                    </div>
+                </div>
+                <ul>
+                    <li>Coordinated a 24-hour event for 120+ participants, resolving technical issues under pressure.</li>
+                </ul>
+            </div>
+
+            <div class="volunteer">
+                <div class="volunteer-header">
+                    <div>
+                        <h3>Elections New Brunswick</h3>
+                        <p class="role">Voters List Officer</p>
+                    </div>
+                    <div>
+                        <p class="location">St. Andrews, NB</p>
+                        <p class="date">2016</p>
+                    </div>
+                </div>
+                <ul>
+                    <li>Audited 500+ registrations with 100% accuracy.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
